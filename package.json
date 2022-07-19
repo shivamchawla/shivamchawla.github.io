@@ -1,0 +1,24 @@
+{
+  "name": "shivamchawla_portfolio",
+  "version": "1.0.0",
+  "description": "A simple and responsive portfolio",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "lite" : "lite-server",
+    "test": "npm run lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivamchawla/Portfolio.git"
+  },
+  "author": "Shivam Chawla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shivamchawla/Portfolio/issues"
+  },
+  "homepage": "https://github.com/shivamchawla/Portfolio#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
