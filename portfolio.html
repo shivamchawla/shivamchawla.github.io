@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivam Chawla — SAP & Python Developer</title>
+<meta name="description" content="Portfolio of Shivam Chawla — SAP ABAP Developer & Python Engineer with 3+ years of experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#f7f5f0;--fg:#1e2330;
+  --primary:#4a8c72;--primary-fg:#f7f5f0;
+  --muted:#6b7280;--card:#f0ede6;
+  --border:#ddd8ce;--accent:#dceee4;--accent-fg:#2d5e46;
+  --radius:0.5rem;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,h5,h6,nav a,.pill,.btn,.period,.role-co{font-family:'Space Grotesk',system-ui,sans-serif}
+a{color:inherit;text-decoration:none}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(247,245,240,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:860px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-weight:700;font-size:.9rem;letter-spacing:-.02em}
+.logo span{color:var(--primary)}
+.nav-links{display:flex;gap:1.5rem}
+.nav-links a{font-size:.875rem;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--fg)}
+.hamburger{display:none;background:none;border:none;cursor:pointer;font-size:1.4rem;color:var(--fg)}
+.mobile-menu{display:none;flex-direction:column;gap:.75rem;padding:0 1.5rem 1rem;background:var(--bg);border-bottom:1px solid var(--border)}
+.mobile-menu.open{display:flex}
+
+/* SECTION */
+.section{max-width:860px;margin:0 auto;padding:6rem 1.5rem}
+.section-title{font-size:2rem;font-weight:700;margin-bottom:3rem}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;max-width:860px;margin:0 auto;padding:0 1.5rem}
+.hero .tag{color:var(--primary);font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1rem;font-family:'Space Grotesk',sans-serif}
+.hero h1{font-size:clamp(3rem,8vw,5.5rem);font-weight:700;letter-spacing:-.03em;line-height:.95}
+.hero .subtitle{margin-top:1.5rem;color:var(--muted);max-width:480px;font-size:1.05rem;line-height:1.7}
+.hero .actions{margin-top:2rem;display:flex;align-items:center;gap:1rem}
+.btn{display:inline-flex;align-items:center;padding:.6rem 1.25rem;background:var(--primary);color:var(--primary-fg);border:none;border-radius:var(--radius);font-size:.875rem;font-weight:500;cursor:pointer;transition:opacity .2s}
+.btn:hover{opacity:.9}
+.link{color:var(--muted);font-size:.875rem;transition:color .2s}
+.link:hover{color:var(--fg)}
+
+/* SKILLS */
+.skill-group{margin-bottom:2rem}
+.skill-group h3{color:var(--primary);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.75rem}
+.pills{display:flex;flex-wrap:wrap;gap:.5rem}
+.pill{padding:.35rem .75rem;background:var(--accent);color:var(--accent-fg);font-size:.85rem;border-radius:var(--radius);border:1px solid var(--border)}
+
+/* EXPERIENCE */
+.exp-item{border-left:2px solid rgba(74,140,114,.3);padding-left:1.5rem;margin-bottom:2.5rem}
+.period{font-size:.85rem;color:var(--muted)}
+.role{font-size:1.15rem;font-weight:600;margin-top:.25rem}
+.role-co{color:var(--primary);font-size:.875rem;margin-top:.15rem}
+.exp-item ul{margin-top:.75rem;list-style:none}
+.exp-item li{font-size:.875rem;color:var(--muted);line-height:1.7;padding-left:1rem;position:relative;margin-bottom:.35rem}
+.exp-item li::before{content:'·';position:absolute;left:0;color:var(--primary);font-weight:700}
+
+/* PROJECTS */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
+.project-card{padding:1.5rem;border-radius:var(--radius);background:var(--card);border:1px solid var(--border);transition:border-color .2s}
+.project-card:hover{border-color:rgba(74,140,114,.3)}
+.project-card .tech{color:var(--primary);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;font-family:'Space Grotesk',sans-serif}
+.project-card h3{font-size:1rem;font-weight:600;margin-top:.5rem}
+.project-card p{font-size:.85rem;color:var(--muted);margin-top:.6rem;line-height:1.6}
+
+/* CONTACT */
+.contact-link{display:flex;align-items:center;gap:.75rem;color:var(--muted);font-size:.875rem;margin-bottom:.75rem;transition:color .2s}
+.contact-link:hover{color:var(--fg)}
+.contact-link svg{width:16px;height:16px;stroke:var(--primary);fill:none;stroke-width:2}
+.footer{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border);font-size:.75rem;color:var(--muted);font-family:'Space Grotesk',sans-serif}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:block}
+  .section-title{font-size:1.5rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">SC<span>.</span></a>
+    <div class="nav-links">
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mob').classList.toggle('open')" aria-label="Menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mob">
+    <a href="#skills" onclick="document.getElementById('mob').classList.remove('open')">Skills</a>
+    <a href="#experience" onclick="document.getElementById('mob').classList.remove('open')">Experience</a>
+    <a href="#projects" onclick="document.getElementById('mob').classList.remove('open')">Projects</a>
+    <a href="#contact" onclick="document.getElementById('mob').classList.remove('open')">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <p class="tag">SAP ABAP Developer &amp; Python Engineer</p>
+  <h1>Shivam<br>Chawla</h1>
+  <p class="subtitle">3+ years building enterprise SAP solutions and Python automations at Volkswagen Group. Clean code, production-ready delivery.</p>
+  <div class="actions">
+    <a href="mailto:shivamjobs09@gmail.com" class="btn">Get in touch</a>
+    <a href="https://github.com" target="_blank" rel="noopener" class="link">GitHub ↗</a>
+  </div>
+</header>
+
+<section id="skills" class="section">
+  <h2 class="section-title">Skills</h2>
+  <div class="skill-group">
+    <h3>SAP</h3>
+    <div class="pills">
+      <span class="pill">ABAP / OO ABAP</span><span class="pill">S/4HANA</span><span class="pill">CDS Views &amp; AMDP</span>
+      <span class="pill">OData / Gateway</span><span class="pill">ALV &amp; OOALV Reports</span><span class="pill">BAPI / BADI / Enhancements</span>
+      <span class="pill">Smart Forms &amp; Adobe Forms</span><span class="pill">Fiori Apps</span><span class="pill">Module Pool / Dialog</span>
+      <span class="pill">BDC / ALE / IDOC</span>
+    </div>
+  </div>
+  <div class="skill-group">
+    <h3>Python &amp; Backend</h3>
+    <div class="pills">
+      <span class="pill">Python</span><span class="pill">Pandas</span><span class="pill">Django REST Framework</span>
+      <span class="pill">REST APIs</span><span class="pill">ETL Automation</span><span class="pill">Data Migration</span>
+      <span class="pill">RFC / OData Integration</span><span class="pill">SQL</span>
+    </div>
+  </div>
+  <div class="skill-group">
+    <h3>Web &amp; Other</h3>
+    <div class="pills">
+      <span class="pill">JavaScript (ES6)</span><span class="pill">ReactJS</span><span class="pill">HTML / CSS</span>
+      <span class="pill">Git</span><span class="pill">WebRTC</span>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="section">
+  <h2 class="section-title">Experience</h2>
+  <div class="exp-item">
+    <p class="period">Sept 2022 — Present</p>
+    <h3 class="role">SAP ABAP Developer</h3>
+    <p class="role-co">Volkswagen Group Technology Solutions · Pune, India</p>
+    <ul>
+      <li>End-to-end S/4HANA Green Field Implementation for Volkswagen Group Australia, replacing legacy AS-400 system.</li>
+      <li>Built custom ALV/OOALV reports, Adobe Forms, Smart Forms, and Fiori apps across MM, SD, FI &amp; EWM modules.</li>
+      <li>Created Item Inquiry Dashboard and Back Order Dashboard using Dialog Programming, activated in Fiori.</li>
+      <li>Python↔SAP automation achieving 99.9% migration accuracy and reducing manual effort by 112 hrs/week.</li>
+    </ul>
+  </div>
+  <div class="exp-item">
+    <p class="period">June 2020 — Aug 2020</p>
+    <h3 class="role">Frontend Developer Intern</h3>
+    <p class="role-co">Exatask · New Delhi, India</p>
+    <ul>
+      <li>Built corporate website using HTML, CSS, JavaScript (ES6) and ReactJS with Agile methodology.</li>
+      <li>Collaborated via GitLab for version control and efficient code management.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <p class="tech">Python · Django REST Framework</p>
+      <h3>Import Management System</h3>
+      <p>Designed and implemented full business logic from scratch. Automated third-party interfaces, reducing 112 hours/week of manual work with 100% test accuracy.</p>
+    </div>
+    <div class="project-card">
+      <p class="tech">SAP ABAP · Dialog Programming · Fiori</p>
+      <h3>Item Inquiry Dashboard</h3>
+      <p>MM module dashboard displaying material info, pricing, demands, stock availability across plants — built with Module Pool and activated in Fiori.</p>
+    </div>
+    <div class="project-card">
+      <p class="tech">Node.js · WebRTC · Twilio</p>
+      <h3>Go-Omegle</h3>
+      <p>Full-stack video calling and messaging app with random matching and personalized secure code system for one-on-one chats.</p>
+    </div>
+    <div class="project-card">
+      <p class="tech">ReactJS · OpenWeather API · Unsplash API</p>
+      <h3>SkyCast</h3>
+      <p>Dynamic weather app with real-time data and background images that update based on search location.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2 class="section-title">Let's connect</h2>
+  <a href="mailto:shivamjobs09@gmail.com" class="contact-link">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    shivamjobs09@gmail.com
+  </a>
+  <a href="tel:+919968089909" class="contact-link">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    +91-9968089909
+  </a>
+  <div class="footer">© 2025 Shivam Chawla. Built with care.</div>
+</section>
+
+</body>
+</html>
